@@ -1,0 +1,107 @@
+.newsletter { background: var(--cream); }
+
+.newsletter__inner {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newsletter__deco {
+  display: flex;
+  gap: var(--s4);
+  color: var(--accent);
+  font-size: .65rem;
+  opacity: .55;
+  margin-bottom: var(--s4);
+  letter-spacing: .5em;
+}
+
+.newsletter__title {
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+  font-weight: 300;
+  margin: var(--s2) 0 var(--s4);
+}
+.newsletter__title em { font-style: italic; color: var(--accent); }
+
+.newsletter__sub {
+  max-width: 460px;
+  font-size: .94rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: var(--s6);
+}
+
+/* Form */
+.newsletter__form { width: 100%; max-width: 480px; }
+
+.newsletter__field {
+  display: flex;
+  gap: var(--s2);
+  background: white;
+  border: 1.5px solid var(--sand);
+  border-radius: var(--r-full);
+  padding: 5px 5px 5px 20px;
+  transition: border-color var(--t-fast), box-shadow var(--t-fast);
+}
+.newsletter__field:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(201,169,110,.18);
+}
+.newsletter__field--error { border-color: #D94040; }
+
+.newsletter__input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: .9rem;
+  color: var(--dark);
+  min-width: 0;
+}
+.newsletter__input::placeholder { color: var(--text-muted); }
+.newsletter__btn { flex-shrink: 0; padding: .6rem 1.4rem; font-size: .74rem; }
+
+.newsletter__error {
+  font-size: .76rem;
+  color: #D94040;
+  margin-top: var(--s2);
+  text-align: left;
+}
+
+.newsletter__legal {
+  font-size: .7rem;
+  color: var(--text-muted);
+  margin-top: var(--s3);
+  line-height: 1.5;
+}
+.newsletter__legal a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+
+/* Success */
+.newsletter__success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s4);
+  padding: var(--s6);
+  background: white;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--sand);
+  animation: fadeUp .4s ease;
+  max-width: 400px;
+}
+.newsletter__success-icon {
+  width: 48px; height: 48px;
+  background: var(--accent-light);
+  color: var(--brown);
+  border-radius: var(--r-full);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; font-weight: 700;
+}
+.newsletter__success p {
+  font-size: .9rem;
+  color: var(--text-light);
+  text-align: center;
+}

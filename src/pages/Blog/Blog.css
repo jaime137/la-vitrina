@@ -1,0 +1,5 @@
+.blog-empty {
+  text-align: center;
+  padding: var(--s8) 0;
+  color: var(--text-muted);
+}

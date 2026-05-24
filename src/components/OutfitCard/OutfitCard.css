@@ -1,0 +1,118 @@
+.outfit-card {
+  background: var(--warm-white);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  transition: transform var(--t-base), box-shadow var(--t-base);
+}
+.outfit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Image */
+.outfit-card__img-wrap {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
+.outfit-card__img-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform var(--t-slow);
+}
+.outfit-card:hover .outfit-card__img-wrap img { transform: scale(1.05); }
+
+/* Hover overlay */
+.outfit-card__hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26,23,20,.5);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: var(--s5);
+  opacity: 0;
+  transition: opacity var(--t-base);
+}
+.outfit-card:hover .outfit-card__hover-overlay { opacity: 1; }
+
+.outfit-card__shop-btn {
+  transform: translateY(10px);
+  transition: transform var(--t-base), background var(--t-base), box-shadow var(--t-base);
+}
+.outfit-card:hover .outfit-card__shop-btn { transform: translateY(0); }
+
+/* Badges */
+.outfit-card__aesthetic {
+  position: absolute;
+  top: var(--s3);
+  left: var(--s3);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  background: rgba(253,251,248,.92);
+  color: var(--charcoal);
+  padding: 3px 10px;
+  border-radius: var(--r-full);
+  backdrop-filter: blur(4px);
+}
+.outfit-card__season {
+  position: absolute;
+  top: var(--s3);
+  right: var(--s3);
+  font-size: .6rem;
+}
+
+/* Body */
+.outfit-card__body { padding: var(--s4) var(--s5) var(--s5); }
+
+.outfit-card__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s2);
+  margin-bottom: 4px;
+}
+.outfit-card__title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--dark);
+  line-height: 1.2;
+}
+.outfit-card__price {
+  font-size: .73rem;
+  font-weight: 500;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.outfit-card__desc {
+  font-size: .78rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: var(--s3);
+}
+.outfit-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s2);
+}
+.outfit-card__tags { display: flex; flex-wrap: wrap; gap: 3px; flex: 1; }
+.outfit-card__tag-chip { font-size: .58rem; padding: 2px 7px; }
+
+.outfit-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  white-space: nowrap;
+  transition: color var(--t-fast), gap var(--t-fast);
+  text-decoration: none;
+}
+.outfit-card__link:hover { color: var(--dark); gap: 8px; }
